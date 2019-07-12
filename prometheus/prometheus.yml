@@ -19,7 +19,7 @@ scrape_configs:
       - targets: ['nodeexporter:9100']
   
   - job_name: 'blackbox'
-    scrape_interval: 30s
+    scrape_interval: 1m
     metrics_path: /probe
     file_sd_configs:
       - files:
