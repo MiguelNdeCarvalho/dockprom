@@ -21499,6 +21499,10 @@
       }
     ]
   },
+  "tags": [
+    "nodeexporter",
+    "prometheus"
+  ],
   "time": {
     "from": "now-24h",
     "to": "now"
@@ -21526,7 +21530,7 @@
   },
   "refresh": "5m",
   "timezone": "browser",
-  "title": "System Data",
+  "title": "System Monitor",
   "uid": "oW1Z_AIWz",
   "version": 1
 }}
