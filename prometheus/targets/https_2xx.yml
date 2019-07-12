@@ -1,0 +1,4 @@
+- labels:
+    module: https_2xx
+  targets:
+  - https://nextcloud.miguelndecarvalho.pt/
