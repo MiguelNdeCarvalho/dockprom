@@ -106,7 +106,7 @@ services:
     container_name: grafana
     volumes:
       - grafana_data:/var/lib/grafana
-      - ./grafana/datasources:/etc/grafana/datasources
+      - ./grafana/datasources:/etc/grafana/provisioning/datasources/
       - ./grafana/dashboards:/etc/grafana/dashboards
       - ./grafana/setup.sh:/setup.sh
     entrypoint: /setup.sh

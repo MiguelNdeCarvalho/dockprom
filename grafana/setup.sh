@@ -9,7 +9,6 @@
 
 GRAFANA_URL=${GRAFANA_URL:-http://$GF_SECURITY_ADMIN_USER:$GF_SECURITY_ADMIN_PASSWORD@localhost:3000}
 #GRAFANA_URL=http://grafana-plain.k8s.playground1.aws.ad.zopa.com
-DATASOURCES_PATH=${DATASOURCES_PATH:-/etc/grafana/datasources}
 DASHBOARDS_PATH=${DASHBOARDS_PATH:-/etc/grafana/dashboards}
 
 # Generic function to call the Vault API
@@ -36,22 +35,6 @@ wait_for_api() {
   done 
 }
 
-install_datasources() {
-  local datasource
-
-  for datasource in ${DATASOURCES_PATH}/*.json
-  do
-    if [[ -f "${datasource}" ]]; then
-      echo "Installing datasource ${datasource}"
-      if grafana_api POST /api/datasources "" "${datasource}"; then
-        echo "installed ok"
-      else
-        echo "install failed"
-      fi
-    fi
-  done
-}
-
 install_dashboards() {
   local dashboard
 
@@ -72,7 +55,6 @@ install_dashboards() {
 
 configure_grafana() {
   wait_for_api
-  install_datasources
   install_dashboards
 }
 
