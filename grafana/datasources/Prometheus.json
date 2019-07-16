@@ -2,6 +2,7 @@
     "name":"Prometheus",
     "type":"prometheus",
     "url":"http://prometheus:9090",
+    "interval": "2m",
     "access":"proxy",
     "basicAuth":false
   }
