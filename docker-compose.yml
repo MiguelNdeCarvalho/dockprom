@@ -112,9 +112,8 @@ services:
     volumes:
       - grafana_data:/var/lib/grafana
       - ./grafana/datasources:/etc/grafana/provisioning/datasources/
-      - ./grafana/dashboards:/etc/grafana/dashboards
+      - ./grafana/dashboards:/etc/grafana/provisioning/dashboards/
       - ./grafana/setup.sh:/setup.sh
-    entrypoint: /setup.sh
     environment:
       - GF_INSTALL_PLUGINS=grafana-piechart-panel
       - GF_SECURITY_ADMIN_USER=${ADMIN_USER:-admin}
