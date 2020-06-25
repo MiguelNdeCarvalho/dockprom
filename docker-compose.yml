@@ -84,7 +84,7 @@ services:
       - ./blackbox/:/etc/blackboxexporter/
     command:
       - '--config.file=etc/blackboxexporter/config.yml'
-    dns: 8.8.8.8
+    dns: 1.1.1.1
     restart: unless-stopped
     networks:
       - monitor-net
