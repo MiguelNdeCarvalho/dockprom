@@ -47,7 +47,7 @@ services:
       org.label-schema.group: "monitoring"
 
   karma:
-    image: lmierzwa/karma:v0.66
+    image: lmierzwa/karma:v0.68
     container_name: karma
     environment:
       - ALERTMANAGER_URI=http://alertmanager:9093
