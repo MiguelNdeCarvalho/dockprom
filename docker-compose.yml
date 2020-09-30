@@ -78,7 +78,7 @@ services:
       org.label-schema.group: "monitoring"
 
   blackbox:
-    image: prom/blackbox-exporter:v0.17.0
+    image: quay.io/prometheus/blackbox-exporter:v0.17.0
     container_name: blackbox
     volumes:
       - ./blackbox/:/etc/blackboxexporter/
