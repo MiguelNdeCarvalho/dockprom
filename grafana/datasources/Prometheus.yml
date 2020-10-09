@@ -7,6 +7,4 @@ datasources:
     isDefault: true
     url: http://prometheus:9090
     basicAuth : false
-    jsonData:
-      timeInterval: '1m'
     editable: true
