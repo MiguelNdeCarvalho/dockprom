@@ -60,7 +60,7 @@ services:
       org.label-schema.group: "monitoring"
 
   nodeexporter:
-    image: quay.io/prometheus/node-exporter:v0.18.1
+    image: quay.io/prometheus/node-exporter:v1.8.2
     container_name: nodeexporter
     hostname: This-Machine
     volumes:
