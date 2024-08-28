@@ -11,7 +11,7 @@ volumes:
 services:
 
   prometheus:
-    image: quay.io/prometheus/prometheus:v2.24.1
+    image: quay.io/prometheus/prometheus:v2.54.1
     container_name: prometheus
     volumes:
       - ./prometheus/:/etc/prometheus/
