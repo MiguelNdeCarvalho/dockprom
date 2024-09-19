@@ -129,7 +129,7 @@ services:
       org.label-schema.group: "monitoring"
 
   pushgateway:
-    image: quay.io/prometheus/pushgateway:v0.10.0
+    image: quay.io/prometheus/pushgateway:v1.10.0
     container_name: pushgateway
     restart: unless-stopped
     networks:
